@@ -17,14 +17,8 @@ This project's `SelfQueryParentChildRetriver` class combines them: **Self-Query 
 matches at the small child-chunk level, then the result is resolved back to the full parent
 document** before it ever reaches the LLM. You get precise, filterable retrieval *and* full
 context in the answer.
-
 ## Architecture
-
-```
-<img width="624" height="630" alt="output" src="https://github.com/user-attachments/assets/339fa332-94fb-4bdf-8959-81d6554e68a7" />](https://github.com/kuntal2022/agentic-rag-parent-self-fusion/blob/main/output.png)
-
-
-```
+[![Architecture](https://github.com/user-attachments/assets/339fa332-94fb-4bdf-8959-81d6554e68a7)](https://github.com/kuntal2022/agentic-rag-parent-self-fusion/blob/main/output.png)
 
 
 - **`DecionNode`** — classifies whether a question needs vector retrieval (`Regular`),

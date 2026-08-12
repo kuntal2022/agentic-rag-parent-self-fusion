@@ -21,7 +21,7 @@ context in the answer.
 ## Architecture
 
 ```
-[<img width="624" height="630" alt="output" src="https://github.com/user-attachments/assets/339fa332-94fb-4bdf-8959-81d6554e68a7" />](https://github.com/kuntal2022/agentic-rag-parent-self-fusion/blob/main/output.png)
+<img width="624" height="630" alt="output" src="https://github.com/user-attachments/assets/339fa332-94fb-4bdf-8959-81d6554e68a7" />](https://github.com/kuntal2022/agentic-rag-parent-self-fusion/blob/main/output.png)
 
 
 ```

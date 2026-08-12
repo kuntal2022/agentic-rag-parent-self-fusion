@@ -21,7 +21,8 @@ context in the answer.
 ## Architecture
 
 ```
-![Uploading image.png…]()
+<img width="624" height="630" alt="output" src="https://github.com/user-attachments/assets/339fa332-94fb-4bdf-8959-81d6554e68a7" />
+
 
 ```
 

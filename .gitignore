@@ -1,0 +1,26 @@
+# Environment / secrets
+.env
+
+# Python
+__pycache__/
+*.py[oc]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Persisted vector store / doc store (rebuilt locally from the CSV on first run)
+chroma_store/
+parent_store/
+
+# Source data (may be large / private — provide your own copy locally)
+data/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.vscode/

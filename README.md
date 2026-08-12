@@ -21,35 +21,9 @@ context in the answer.
 ## Architecture
 
 ```
-                         ┌───────────────┐
-                         │   DecionNode   │  (LLM classifies: Agent / Regular / Both)
-                         └───────┬───────┘
-                 ┌───────────────┼───────────────┐
-                 ▼                               ▼
-         ┌───────────────┐               ┌───────────────┐
-         │ Agent_Execution│               │ retriver_node │  (Self-Query + Parent-Child
-         │ (pandas agent) │               │ (+ compression)│   fusion retriever, then
-         └───────┬───────┘               └───────┬───────┘   contextual compression)
-                 │                                │
-                 ▼                       ┌────────┴────────┐
-        Agent_Augmentation               ▼                 ▼
-                 │            Regular_Augmentation    combine_node
-                 │                       │           (merges retrieved
-                 └───────────┬───────────┴────┐       context + pandas
-                              ▼                        result for "Both")
-                         ┌─────────┐
-                         │Generation│
-                         └────┬────┘
-                              ▼
-                        ┌───────────┐
-                        │LLm_AS_judge│──Good──▶ END
-                        └─────┬─────┘
-                          Rework (loops back, up to 3 tries)
-                              ▼
-                         ┌─────────┐
-                         │Generation│
-                         └─────────┘
+<img width="777" height="786" alt="image" src="https://github.com/user-attachments/assets/caaa1ca9-a017-488d-b044-eeb34d8b3d5c" />
 ```
+
 
 - **`DecionNode`** — classifies whether a question needs vector retrieval (`Regular`),
   the pandas dataframe agent (`Agent`, for aggregations/comparisons like "highest revenue"),
